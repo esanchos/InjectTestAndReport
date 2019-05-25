@@ -2,6 +2,10 @@ package com.earaujo.calculaimposto
 
 class Federal : Imposto {
     override fun calculaImposto(valorDoProduto: Double): Double {
-        return valorDoProduto*0.01
+        if (valorDoProduto < 1000f) {
+            return valorDoProduto*0.1
+        } else {
+            return valorDoProduto*0.05
+        }
     }
 }

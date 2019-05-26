@@ -6,7 +6,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    val calculaImpostoBR = CalculaImposto()
+    val calculaImpostoBR = CalculaImposto(Federal(), Municipal())
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -6,11 +6,13 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    val calculaImpostoBR = CalculaImposto(Federal(), Municipal())
+    private lateinit var calculaImpostoBR: CalculaImposto
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        calculaImpostoBR  = (application as App).getCalculaImposto()
 
         btn_calcula.setOnClickListener {
             val valorDaCompra = et_compra.text.toString().toDouble()

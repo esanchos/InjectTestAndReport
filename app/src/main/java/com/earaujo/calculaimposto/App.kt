@@ -2,7 +2,7 @@ package com.earaujo.calculaimposto
 
 import android.app.Application
 
-class App: Application() {
+open class App: Application() {
 
     private lateinit var calculaImposto: CalculaImposto
 
@@ -11,5 +11,5 @@ class App: Application() {
         calculaImposto = CalculaImposto(Federal(), Municipal())
     }
 
-    fun getCalculaImposto() = calculaImposto
+    open fun getCalculaImposto() = CalculaImposto(Federal(), Municipal())
 }

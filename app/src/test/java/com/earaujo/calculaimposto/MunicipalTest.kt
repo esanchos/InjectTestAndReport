@@ -1,6 +1,6 @@
 package com.earaujo.calculaimposto
 
-import org.junit.Assert
+import org.junit.Assert.assertEquals
 import org.junit.Test
 
 class MunicipalTest {
@@ -14,7 +14,7 @@ class MunicipalTest {
         val result = municipal.calculaImposto(499.0)
 
         //Check
-        Assert.assertEquals(result, 249.5, 0.0001)
+        assertEquals(result, 249.5, 0.0001)
     }
 
     @Test
@@ -26,7 +26,7 @@ class MunicipalTest {
         val result = municipal.calculaImposto(500.0)
 
         //Check
-        Assert.assertEquals(result, 125.0, 0.0001)
+        assertEquals(result, 125.0, 0.0001)
     }
 
     @Test
@@ -38,6 +38,6 @@ class MunicipalTest {
         val result = municipal.calculaImposto(501.0)
 
         //Check
-        Assert.assertEquals(result, 125.25, 0.0001)
+        assertEquals(result, 125.25, 0.0001)
     }
 }
